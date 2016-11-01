@@ -165,7 +165,12 @@ namespace XA01
         /// </summary>
         public void ProgrammersWork()
         {
+            foreach(Programmer programmer in Programmers)
+            {
+                programmer.WriteCode();
+                Budget -= (programmer.DailyWage + DailyExpenses);
 
+            }
         }
 
         /// <summary>
@@ -175,7 +180,14 @@ namespace XA01
         /// </summary>
         public void CheckCompanyState()
         {
-            
+            if(Budget < 0)
+            {
+                State = CompanyState.Bankrupt;
+            }
+            else if (ProjectsWaiting.Count == 0)
+            {
+                State = CompanyState.Finished;
+            }
         }
 
         /// <summary>
@@ -185,7 +197,7 @@ namespace XA01
         public void Run()
         {
             // IMPLEMENTUJTE ZDE: az budete mit implementovanu tridu Logger, pak nasledujici radek odkomentujte
-            //logger.Log(string.Format("Company: {0}, started with budget: {1}", Name, Budget));
+            logger.Log(string.Format("Company: {0}, started with budget: {1}", Name, Budget));
             State = CompanyState.Running;
             while(State != CompanyState.Bankrupt && State != CompanyState.Finished && Days <= 1000)
             {
