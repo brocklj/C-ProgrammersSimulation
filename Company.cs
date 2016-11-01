@@ -84,23 +84,21 @@ namespace XA01
         {  
 
             
-            int x = 0;
-            foreach(Project project in ProjectsCurrent)
+            
+            for(int x=0; x < ProjectsCurrent.Count; ++x)
             {
+                Project project = ProjectsCurrent[x];
                 if(project.ManDaysDone >= project.ManDays)
                 {
                     project.State = ProjectState.Done;
                     ProjectsDone.Add(project);
-                    ProjectsCurrent.RemoveAt(x);
-                    Budget += project.Price;
-                    break;
-                      
-                    {
-
-                    }
+                    ProjectsCurrent.Remove(project);
+                    Budget += project.Price;               
+                   
                 }
+              
 
-                ++x;
+               
             }
             
           
