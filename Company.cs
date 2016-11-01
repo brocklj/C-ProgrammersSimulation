@@ -108,7 +108,13 @@ namespace XA01
         /// </summary>
         public void CheckProgrammers()
         {
-
+            foreach(Programmer programmer in Programmers)
+            {
+                if(programmer.Project.State == ProjectState.Done )
+                {
+                    programmer.ClearProject();
+                }
+            }
 
         }
 
@@ -123,6 +129,20 @@ namespace XA01
         /// </summary>
         public void AssignNewProjects()
         {
+            if(ProjectsWaiting.Count > 0)
+            {
+                foreach (Programmer programmer in Programmers)
+                {
+                    if (programmer.Project == null)
+
+                }
+
+            }
+            else
+            {
+
+            }
+           
 
         }
 
