@@ -129,20 +129,32 @@ namespace XA01
         /// </summary>
         public void AssignNewProjects()
         {
-            if(ProjectsWaiting.Count > 0)
+         foreach (Programmer programmer in Programmers)
             {
-                foreach (Programmer programmer in Programmers)
-                {
-                    if (programmer.Project == null)
+             if (programmer.Project == null)
+              {
+                  if(ProjectsWaiting.Count > 0)
+                    {
+              
+                        Project projectwaiting = ProjectsWaiting[0];
+                        projectwaiting.State = ProjectState.Current;
+                        ProjectsCurrent.Add(projectwaiting);
+                        ProjectsWaiting.RemoveAt(0);
+                        programmer.AssignProject(projectwaiting);
+
+                    }
+                  else
+                    {
+                        Project[] projectscurrent = ProjectsCurrent.ToArray();
+                        Array.Sort(projectscurrent, (prg1, prg2) => (prg1.ManDays - prg1.ManDaysDone).CompareTo(prg2.ManDays - prg2.ManDaysDone));
+                        programmer.AssignProject(projectscurrent[(projectscurrent.Length - 1)]);
+                       
+                    }
+
 
                 }
 
             }
-            else
-            {
-
-            }
-           
 
         }
 
