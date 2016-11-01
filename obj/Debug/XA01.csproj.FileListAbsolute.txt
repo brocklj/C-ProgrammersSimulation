@@ -1,0 +1,13 @@
+F:\Pavel\Work\UCL\2016\RevizeCSP\XA01\XA01\XA01\bin\Debug\XA01.exe.config
+F:\Pavel\Work\UCL\2016\RevizeCSP\XA01\XA01\XA01\bin\Debug\XA01.exe
+F:\Pavel\Work\UCL\2016\RevizeCSP\XA01\XA01\XA01\bin\Debug\XA01.pdb
+F:\Pavel\Work\UCL\2016\RevizeCSP\XA01\XA01\XA01\obj\Debug\XA01.csprojResolveAssemblyReference.cache
+F:\Pavel\Work\UCL\2016\RevizeCSP\XA01\XA01\XA01\obj\Debug\XA01.exe
+F:\Pavel\Work\UCL\2016\RevizeCSP\XA01\XA01\XA01\obj\Debug\XA01.pdb
+F:\Pavel\Work\UCL\2016\RevizeCSP\XA01\XA01\bin\Debug\XA01.exe.config
+C:\Users\brock\Desktop\brockljakub_XA01\bin\Debug\XA01.exe.config
+C:\Users\brock\Desktop\brockljakub_XA01\bin\Debug\XA01.exe
+C:\Users\brock\Desktop\brockljakub_XA01\bin\Debug\XA01.pdb
+C:\Users\brock\Desktop\brockljakub_XA01\obj\Debug\XA01.csprojResolveAssemblyReference.cache
+C:\Users\brock\Desktop\brockljakub_XA01\obj\Debug\XA01.exe
+C:\Users\brock\Desktop\brockljakub_XA01\obj\Debug\XA01.pdb
