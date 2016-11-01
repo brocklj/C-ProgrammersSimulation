@@ -66,7 +66,7 @@ namespace XA01
             for (int x=0; x < Capacity; x++)
             {
 
-                Programmers.Add(programmers[x]);
+                Programmers.Add(programmers[(programmers.Count - x -1)]);
             }
        
             
@@ -81,7 +81,9 @@ namespace XA01
         ///     Zaroven temto projektum nastavte spravny stav, pridejte je do ProjectsDone a do rozpoctu firmy prictete utrzene penize za projekt.
         /// </summary>
         public void CheckProjects()
-        {
+        {  
+
+            
             int x = 0;
             foreach(Project project in ProjectsCurrent)
             {
@@ -91,6 +93,7 @@ namespace XA01
                     ProjectsDone.Add(project);
                     ProjectsCurrent.RemoveAt(x);
                     Budget += project.Price;
+                    break;
                       
                     {
 
@@ -99,6 +102,7 @@ namespace XA01
 
                 ++x;
             }
+            
           
         }
 
@@ -184,7 +188,7 @@ namespace XA01
             {
                 State = CompanyState.Bankrupt;
             }
-            else if (ProjectsWaiting.Count == 0)
+            else if (ProjectsCurrent.Count == 0)
             {
                 State = CompanyState.Finished;
             }
