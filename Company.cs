@@ -167,12 +167,15 @@ namespace XA01
         /// </summary>
         public void ProgrammersWork()
         {
+            int allwages = 0;
             foreach(Programmer programmer in Programmers)
             {
                 programmer.WriteCode();
-                Budget -= (programmer.DailyWage + DailyExpenses);
+                allwages += (programmer.DailyWage);
 
             }
+            Budget -= allwages + DailyExpenses;
+
         }
 
         /// <summary>
