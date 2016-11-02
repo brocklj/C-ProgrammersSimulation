@@ -1,10 +1,15 @@
-﻿namespace XA01
+﻿using System.Collections.Generic;
+namespace XA01
 { 
-  abstract class Employee
+ public abstract class Employee
     {
-        public abstract string Name { get; set; }
-        public abstract int DailyWage { get; set; }
-       
+       public string Name { get; private set; }
+        public int DailyWage { get; private set; }
+     public Employee(string name, int dailyWage)
+        {
+            Name = name;
+            DailyWage = dailyWage;
+        }
      
     }
 }
