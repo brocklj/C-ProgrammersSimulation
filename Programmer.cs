@@ -1,10 +1,10 @@
 ﻿namespace XA01
 {
-    public class Programmer
+    public class Programmer : Employee
     {
-        public string Name { get; private set; }
+        
         public double Speed { get; private set; }
-        public int DailyWage { get; private set; }
+        
         public double Ratio { get; private set; }
 
         public Project Project { get; private set; }
@@ -17,12 +17,10 @@
             }
         }
 
-        public Programmer(string name,double speed, int dailyWage)
+        public Programmer(string name,double speed, int dailyWage):base(name, dailyWage)
         {
-            Name = name;
             Speed = speed;
-            DailyWage = dailyWage;
-            Ratio = speed / DailyWage;
+            Ratio = speed / dailyWage;
         }
         /// <summary>
         /// Uvolni programatora z projektu.
