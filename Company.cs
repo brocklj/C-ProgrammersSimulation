@@ -67,12 +67,7 @@ namespace XA01
             {
 
                 Programmers.Add(programmers[(programmers.Count - x -1)]);
-            }
-       
-            
-          
-
-          
+            }  
        }
 
         /// <summary>
@@ -102,9 +97,6 @@ namespace XA01
             {
                 ProjectsCurrent.Remove(project);
             }
-            
-
-
         }
 
         /// <summary>
