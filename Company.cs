@@ -81,9 +81,10 @@ namespace XA01
         ///     Zaroven temto projektum nastavte spravny stav, pridejte je do ProjectsDone a do rozpoctu firmy prictete utrzene penize za projekt.
         /// </summary>
         public void CheckProjects()
-        {  
+        {
 
-            
+            List<Project> ToRemove = new List<Project>();
+
             
             for(int x=0; x < ProjectsCurrent.Count; ++x)
             {
@@ -92,16 +93,18 @@ namespace XA01
                 {
                     project.State = ProjectState.Done;
                     ProjectsDone.Add(project);
-                    ProjectsCurrent.Remove(project);
+                    ToRemove.Add(project);
                     Budget += project.Price;               
                    
-                }
-              
-
-               
+                }        
+            }
+            foreach (Project project in ToRemove)
+            {
+                ProjectsCurrent.Remove(project);
             }
             
-          
+
+
         }
 
         /// <summary>
